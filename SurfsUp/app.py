@@ -96,12 +96,13 @@ def tobs():
 
     return jsonify(tobs_list)
 
-@app.route("/api/v1.0/<start>")
-def temp_stats(start):
+@app.route("/api/v1.0/<start>/<end>")
+def temp_stats(start, end):
     session = Session(engine)
 
     temperature_stats = session.query(measurement.date, measurement.tobs) \
                            .filter(measurement.date >= start) \
+                           .filter(measurement.date <= end) \
                            .all()
     session.close()
 
@@ -109,13 +110,11 @@ def temp_stats(start):
     for date_obj in temperature_stats:
         date = date_obj.date
         
-
         date_stats = session.query(func.min(measurement.tobs),
                                     func.avg(measurement.tobs),
                                     func.max(measurement.tobs)) \
                              .filter(measurement.date == date) \
                              .first()
-
 
         tmin, tavg, tmax = date_stats
 
