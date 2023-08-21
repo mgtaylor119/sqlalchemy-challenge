@@ -9,7 +9,7 @@ Precipitation Summary Statistics:
 ![summary stats](https://github.com/mgtaylor119/sqlalchemy-challenge/blob/main/SurfsUp/Images/precipitation_summary.png?raw=true)
 
 Stations Graph:  
-![stations]
+![stations](https://github.com/mgtaylor119/sqlalchemy-challenge/blob/main/SurfsUp/Images/tobs_graph.png?raw=true)
 
 Once the analysis was done, the API was created, with the below routes:  
 ![precipitation]
