@@ -3,7 +3,7 @@
 Using Jupyter Notebook I performed a precipitaton and station analysis. Through this analysis, the below graphs were created:
 
 Precipitation Graph:
-![precipitation]
+![precipitation](https://github.com/mgtaylor119/sqlalchemy-challenge/blob/main/SurfsUp/Images/precipitation_graph.png?raw=true)
 
 Precipitation Summary Statistics:
 ![summary stats]
